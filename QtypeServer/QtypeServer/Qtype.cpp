@@ -1,3 +1,4 @@
+#include <assert.h>
 #include "Qtype.h"
 #include "json/json.h"
 std::string strAppKey = "0b164754-fc59-4247-8308-661bfe5acafc";
@@ -45,6 +46,13 @@ void QtypeManager::ReqCreateRoom(unsigned int uDupID)
 
 bool QtypeAgent::ReceiveComplete(CURLcode code)
 {
+	if (!IAgent::ReceiveComplete(code))
+	{
+
+		return false;
+	}
+		
+
 	Json::Reader reader;
 	Json::Value json_object;
 	if (!reader.parse(m_strReceiveData, json_object))
@@ -68,6 +76,7 @@ bool QtypeAgent::ReceiveComplete(CURLcode code)
 		{
 			Json::Value room = json_object["entity"];
 			if (!room.isObject()){
+				assert(false);
 				break;
 			}
 			std::string strRoomName = room["roomName"].asString();
@@ -77,7 +86,7 @@ bool QtypeAgent::ReceiveComplete(CURLcode code)
 			std::cout << uRoomID << std::endl;
 			std::cout << uMaxMember << std::endl;
 		}break;
-	default:return IAgent::ReceiveComplete(code);
+	default:return false;
 		break;
 	}
 	return true;

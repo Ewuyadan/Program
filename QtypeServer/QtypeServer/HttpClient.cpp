@@ -59,6 +59,7 @@ bool IAgent::Init()
 			assert(false);
 		}
 	}
+	m_eState = AGENT_REQUESTING;
 	return true;
 }
 
@@ -76,8 +77,18 @@ void IAgent::Release()
 	}
 	delete this;
 }
-bool IAgent::ReceiveComplete(CURLcode)
+bool IAgent::ReceiveComplete(CURLcode code)
 {
+	switch (code)
+	{
+	case CURLE_OK:
+		m_eState = AGENT_SUCC; 
+		break;
+	default:
+		assert(false && "Http:Req Failed!");
+		m_eState = AGENT_FAIL;
+		break;
+	}
 	return true;
 }
 size_t IAgent::ReceiveData(void *pBuf, size_t nSize, size_t nMemb)

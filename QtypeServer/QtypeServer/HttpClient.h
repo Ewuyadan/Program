@@ -35,6 +35,13 @@ enum HttpTag
 
 	HTTPTAG_QTYPE_END				= 199,
 };
+enum AGENT_STATE
+{
+	AGENT_NULL			= 0,
+	AGENT_REQUESTING	= 1,
+	AGENT_SUCC			= 2,
+	AGENT_FAIL			= 3,
+};
 class IAgent
 {
 public:
@@ -71,6 +78,8 @@ protected:
 	std::string		m_strFileds;		// 表单数据(Post).如:"record={ABCDEFGHIJKLMN}&timestamp=1381835137&signature=8270171bf7ced48c6085ab0dd693365f"
 	std::string		m_strReceiveData;	// 接收到的数据
 	unsigned int	m_uTag;
+private:
+	AGENT_STATE		m_eState;
 };
 
 //////////////////////////////////////////////////////////////////////////

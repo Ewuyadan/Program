@@ -1,13 +1,12 @@
-﻿生成启动时间为 2015/12/31 11:19:42。
+﻿生成启动时间为 2015/12/31 16:54:41。
      1>项目“D:\Program\QtypeServer\QtypeServer\QtypeServer.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\libcurl\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D CURL_STATICLIB /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt HttpClient.cpp json\json_reader.cpp json\json_value.cpp json\json_writer.cpp main.cpp Qtype.cpp
+         F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\lib\libcurl\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /D CURL_STATICLIB /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt HttpClient.cpp Qtype.cpp main.cpp
          Qtype.cpp
-         main.cpp
-         json_writer.cpp
-         json_value.cpp
-         json_reader.cpp
          HttpClient.cpp
+         正在生成代码...
+         正在编译...
+         main.cpp
          正在生成代码...
        Link:
          F:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Program\QtypeServer\Debug\QtypeServer.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\..\lib\libcurl\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Program\QtypeServer\Debug\QtypeServer.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Program\QtypeServer\Debug\QtypeServer.lib" /MACHINE:X86 Debug\HttpClient.obj
@@ -21,4 +20,4 @@
 
 生成成功。
 
-已用时间 00:00:04.32
+已用时间 00:00:03.24
